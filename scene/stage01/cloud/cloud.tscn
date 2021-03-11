@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scene/stage01/cloud/cloud.gd" type="Script" id=1]
+[ext_resource path="res://data/image/object/cloud-1.png" type="Texture" id=2]
+
+[node name="cloud" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0, 0.291626 )
+scale = Vector2( 0.356815, 0.396859 )
+texture = ExtResource( 2 )

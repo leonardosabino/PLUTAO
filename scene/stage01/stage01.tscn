@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scene/shared/cat/cat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/stage01/cloud/cloudSpawner.gd" type="Script" id=3]
+[ext_resource path="res://data/image/ground/ground.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 894.131, 109.91 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 360.439 )
+
+[node name="stage01" type="Node2D"]
+
+[node name="cat" parent="." instance=ExtResource( 2 )]
+position = Vector2( 161.746, 348.875 )
+z_index = 2
+
+[node name="limits" type="StaticBody2D" parent="."]
+z_index = -1
+
+[node name="ground2" type="CollisionShape2D" parent="limits"]
+position = Vector2( 648, 808 )
+shape = SubResource( 1 )
+
+[node name="ground" type="Sprite" parent="limits"]
+position = Vector2( 952, 448 )
+scale = Vector2( 1, 1.11751 )
+texture = ExtResource( 5 )
+
+[node name="wall-left" type="CollisionShape2D" parent="limits"]
+position = Vector2( -8, 360 )
+shape = SubResource( 2 )
+
+[node name="wall-right" type="CollisionShape2D" parent="limits"]
+position = Vector2( 1289.59, 357.304 )
+shape = SubResource( 2 )
+
+[node name="cloudSpawner" type="Node2D" parent="."]
+script = ExtResource( 3 )
