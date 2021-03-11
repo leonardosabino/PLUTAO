@@ -13,7 +13,7 @@ extents = Vector2( 10, 360.439 )
 [node name="stage01" type="Node2D"]
 
 [node name="cat" parent="." instance=ExtResource( 2 )]
-position = Vector2( 161.746, 348.875 )
+position = Vector2( 256.321, 655.502 )
 z_index = 2
 
 [node name="limits" type="StaticBody2D" parent="."]
@@ -24,16 +24,12 @@ position = Vector2( 648, 808 )
 shape = SubResource( 1 )
 
 [node name="ground" type="Sprite" parent="limits"]
-position = Vector2( 952, 448 )
+position = Vector2( 957.612, 446.316 )
 scale = Vector2( 1, 1.11751 )
 texture = ExtResource( 5 )
 
 [node name="wall-left" type="CollisionShape2D" parent="limits"]
 position = Vector2( -8, 360 )
-shape = SubResource( 2 )
-
-[node name="wall-right" type="CollisionShape2D" parent="limits"]
-position = Vector2( 1289.59, 357.304 )
 shape = SubResource( 2 )
 
 [node name="cloudSpawner" type="Node2D" parent="."]
